@@ -1,13 +1,9 @@
 pipeline {
-    agent any
-    
+    agent { docker { image 'myjenkins-blueocean:2.440.3-1' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                script {
-                    // Construire avec Maven
-                    sh 'mvn --version'
-                }
+                sh 'mvn --version'
             }
         }
-}
+    }}
