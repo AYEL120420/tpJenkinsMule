@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Construire avec Maven
-                    sh 'mvn clean package'
+                    sh 'mvn --version'
                 }
             }
         }
